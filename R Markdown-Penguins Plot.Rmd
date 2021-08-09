@@ -1,0 +1,35 @@
+---
+title: "Penguins Plots"
+author: "Tharuka"
+date: "8/9/2021"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+
+# Penguin Plots: Practice Analysis
+
+## Setting up the environment
+
+Notes: Installing the libraries.  
+
+      Packages: `ggplot` and `palmerpenguins`.  
+      
+```{r}
+library(ggplot2)
+library(palmerpenguins)
+```
+
+## Creating plots
+
+Notes: Using **ggplot**.  
+
+
+```{r}
+ggplot(data=penguins) + geom_point(mapping = aes(x=flipper_length_mm,y=body_mass_g,color=species))
+```
+
