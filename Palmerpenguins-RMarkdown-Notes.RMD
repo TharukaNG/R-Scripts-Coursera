@@ -1,0 +1,31 @@
+---
+title: "Palmer Penguins"
+author: "Tharuka"
+date: "8/14/2021"
+output: html_document
+---
+
+## Setting up the environment
+Notes: Setting up the R environment by loading the 'ggplot2' and 'palmer penguins' packages
+
+```{r - loading ggplot and palmer penguins libraries}
+library(ggplot2)
+library(palmerpenguins)
+```
+
+## View penguins data
+
+```{r - view penguins data in tabular format}
+data("penguins")
+View(penguins)
+```
+
+## Visualization
+
+```{r - visualization of data}
+ggplot(data = penguins,aes(x=flipper_length_mm,y=body_mass_g)) +
+  geom_point(aes(color = species))
+```
+
+
+
